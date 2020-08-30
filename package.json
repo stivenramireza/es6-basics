@@ -1,0 +1,19 @@
+{
+  "name": "es6-basics",
+  "version": "1.0.0",
+  "description": "Modern JavaScript ES6 basics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stivenramireza/es6-basics.git"
+  },
+  "author": "Stiven Ramirez Arango",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stivenramireza/es6-basics/issues"
+  },
+  "homepage": "https://github.com/stivenramireza/es6-basics#readme"
+}

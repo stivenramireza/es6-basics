@@ -54,3 +54,38 @@ if (shortLeggies) {
 }
 
 console.log(myDog)
+
+// Task 3: Variables (const) and Inmutability
+
+const paintingInformation = {
+    name: "Starry Night",
+    painter: "Van Gogh",
+    location: {
+        museum: "MoMA",
+        city: "New York City"
+    }
+}
+
+Object.freeze(paintingInformation)
+Object.freeze(paintingInformation.location)
+
+paintingInformation.year = 1889
+paintingInformation.name = "The " + paintingInformation.name
+paintingInformation.location.country = "USA"
+
+console.log(paintingInformation)
+
+// Task 3: Exercise: Refactor the code to use let/const
+
+let painter = {
+    name: 'Van Gogh',
+    nationality: "Dutch",
+    paintings: ["The Starry Night", "Irises", "Almond Blossoms"]
+}
+
+Object.freeze(painter)
+
+painter.birthDate = "March 30, 1853"
+painter.paintings.push("Something")
+
+console.log(painter)

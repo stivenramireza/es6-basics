@@ -143,3 +143,34 @@ console.log(spice1, restOfTheSpices)
 
 const [ ,, thirdSpice ] = spices
 console.log(thirdSpice)
+
+// Task 5: Strings and Interpolation
+
+const language = "English"
+console.log(language.includes("g"))
+console.log(language.startsWith("Eng"))
+console.log(language.endsWith("sh"))
+console.log(language.repeat(3))
+
+console.log(`I speak 
+some languages such as
+${language === "English" ? "British English" : "none"}`)
+
+// Task 5: Exercise: Refactor the code to use the ES6 String utility methods
+
+const country = "Bulgaria"
+const city = "Sofia"
+
+if (country.includes("Bulg")) {
+    console.log("The country starts with Bulg")
+}
+
+if (city.startsWith("So")) {
+    console.log("The name starts with So")
+}
+
+if (city.endsWith("a")) {
+    console.log("The name ends with a")
+}
+
+console.log(`The capital of ${country} is the city of ${city}`)

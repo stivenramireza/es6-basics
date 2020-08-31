@@ -85,7 +85,61 @@ let painter = {
 
 Object.freeze(painter)
 
+
 painter.birthDate = "March 30, 1853"
 painter.paintings.push("Something")
 
 console.log(painter)
+
+// Task 4: Destructuring
+
+const recipe = {
+    name: 'Red Lentil Dahl',
+    timeInMinutes: 30,
+    ingredients: ['red lentils', 'cumin', 'turmeric']
+}
+
+const { name: myName, ingredients: myIngredients } = recipe
+
+console.log(myName, myIngredients)
+
+const spices = ["cardomom", "turmeric", "cumin"]
+const [first, second] = spices
+
+console.log(first, second)
+
+function cook({ name, ingredients }) {
+    console.log(name)
+    console.log(ingredients)
+}
+
+cook(recipe)
+
+// Task 4: Exercise: Extract data with destructuring
+
+const ingredients = {
+    //tea: 'black',
+    //milk: 'soy',
+    //sweetener: 'honey',
+    //spices: ['ginger', 'cardamon', 'cinnamon', 'nutmeg']
+}
+
+// Destructure the parameters
+
+function prepareChai({ tea = "regular", spices = ["lettuce", "tomatoes"], milk = "coolant", sweetener = 'strawberry' }) {
+    console.log("Mix the " + tea + " tea " +
+        "with the " + spices + " in a small pot. " + 
+        "Add a cup of water and bring to boil. Boil for 2-3 min. " +
+        "Add " + milk + " milk and " + sweetener + ". " +
+        "Simmer for 3 min. Serve masla chai hot or warm!")
+}
+
+prepareChai(ingredients)
+
+// const spices = ["cardomom", "turmeric", "cumin"]
+
+const [ spice1, ...restOfTheSpices ] = spices
+console.log(spice1, restOfTheSpices)
+
+const [ ,, thirdSpice ] = spices
+console.log(thirdSpice)

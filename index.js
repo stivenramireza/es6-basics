@@ -189,3 +189,42 @@ const isPrime = number => number % 2 === 0
 const primeNumbers = [1, 2, 3, 4, 5, 6].filter(isPrime)
 
 console.log(primeNumbers)
+
+// Task 7: Arrow functions and this
+
+function Dog() {
+    this.age = 0
+
+    setInterval(() => {
+        this.age += 1
+        console.log(this.age)
+    }, 1000);
+}
+
+// const puppy = new Dog()
+
+const isOdd = (...args) => {
+    console.log(args)
+    return args[0] % 2 === 1
+}
+console.log(isOdd(1))
+
+// Task 7: Exercise
+
+function Translator() {
+   this.phrase = "good day"
+   this.englishBulgarianDictionary = {
+       good: "ÃÂ´ÃÂ¾ÃÂ±ÃÂÃÂ",
+       day: "ÃÂ´ÃÂµÃÂ½"
+   }
+}
+
+Translator.prototype.getBulgarianPhrase = function() {
+   return this.phrase
+       .split(" ")
+       .map(word => this.englishBulgarianDictionary[word])
+       .join(" ")
+}
+ 
+const translator = new Translator()
+console.log(translator.getBulgarianPhrase())

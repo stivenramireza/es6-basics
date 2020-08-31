@@ -174,3 +174,18 @@ if (city.endsWith("a")) {
 }
 
 console.log(`The capital of ${country} is the city of ${city}`)
+
+// Task 6: Arrow functions
+
+const numbers = [1, 2, 3, 4, 5, 6]
+const calculateDouble = number => number * 2
+let doubledNumbers = numbers.map(calculateDouble)
+
+console.log(doubledNumbers)
+
+// Task 6: Exercise: Filter out only the prime number from the array
+
+const isPrime = number => number % 2 === 0
+const primeNumbers = [1, 2, 3, 4, 5, 6].filter(isPrime)
+
+console.log(primeNumbers)
